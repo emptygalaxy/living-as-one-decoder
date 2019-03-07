@@ -1,0 +1,26 @@
+{
+  "name": "living-as-one-decoder",
+  "version": "0.1.0",
+  "description": "Decoder control for Living As One",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://emptygalaxy@github.com/emptygalaxy/living-as-one-decoder.git"
+  },
+  "keywords": [
+    "living",
+    "as",
+    "one",
+    "decoder",
+    "rosstalk"
+  ],
+  "author": "Nick Timman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emptygalaxy/living-as-one-decoder/issues"
+  },
+  "homepage": "https://github.com/emptygalaxy/living-as-one-decoder#readme"
+}
