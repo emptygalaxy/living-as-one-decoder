@@ -9,7 +9,9 @@
     "compile": "tsc",
     "lint": "eslint 'src/**'",
     "fix": "eslint --fix 'src/**'",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run lint && npm audit && npm run build",
+    "postpublish": "git push"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,12 @@
 declare module 'rosstalk' {
   import {EventEmitter} from 'events';
 
-  class Rosstalk extends EventEmitter
-  {
+  class Rosstalk extends EventEmitter {
+    /**
+     *  A talkable ross
+     *
+     *  @params {Object} opts
+     */
     constructor(opts: {host: string; port?: number});
 
     /**
