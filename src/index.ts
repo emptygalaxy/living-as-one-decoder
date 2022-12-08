@@ -1,0 +1,1 @@
+export {LivingAsOneDecoder} from './LivingAsOneDecoder';

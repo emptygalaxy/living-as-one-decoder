@@ -4,7 +4,12 @@
   "description": "Decoder control for Living As One",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require ts-node/register 'src/**/*.spec.ts'",
+    "build": "npm run compile",
+    "compile": "tsc",
+    "lint": "eslint 'src/**'",
+    "fix": "eslint --fix 'src/**'",
+    "clean": "rimraf ./dist"
   },
   "repository": {
     "type": "git",
@@ -23,5 +28,22 @@
     "url": "https://github.com/emptygalaxy/living-as-one-decoder/issues"
   },
   "homepage": "https://github.com/emptygalaxy/living-as-one-decoder#readme",
-  "dependencies": {"rosstalk" : "*"}
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "rosstalk": "^1.0.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.4.10",
+    "@types/prettier": "^2.7.1",
+    "@types/rimraf": "^3.0.2"
+  }
 }
