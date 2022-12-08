@@ -1,7 +1,28 @@
 
 # Living As One Decoder
 
-This library contains classes to control a Living As One decoder over the local network, using the Rosstalk protocol.
+This library contains classes to control a Living As One decoder over the local network, using the Rosstalk protocol.  
+To control any encoders, see [living-as-one-encoder](https://github.com/emptygalaxy/living-as-one-encoder).
+
+```mermaid
+graph LR
+    E[Encoder] -- Internet --> S((Living As One Cloud))
+    S -- Internet --> D
+    
+    IN[[Video source]] --> E
+    D --> OUT[[Video output]]
+    
+    subgraph nodejs
+      LAOE[living-as-one-encoder]
+      LAOD[living-as-one-decoder]
+    end
+    LAOE -- Living As One API --> S
+    LAOE -. controls .-> E
+    LAOD -- RossTalk over Local Network --> D[Decoder]
+    
+    click LAOE "https://github.com/emptygalaxy/living-as-one-encoder" "living-as-one-encoder"
+    click LAOD "https://github.com/emptygalaxy/living-as-one-decoder" "living-as-one-decoder"
+```
 
 
 
@@ -40,3 +61,7 @@ setTimeout(() => {
 }, 2000);
 ```
 
+```mermaid
+graph LR
+    D[Living As One Decoder] -- Local Network --> D[Decoder] 
+```
