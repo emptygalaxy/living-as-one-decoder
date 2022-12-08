@@ -1,6 +1,6 @@
 {
   "name": "living-as-one-decoder",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Decoder control for Living As One",
   "main": "index.js",
   "scripts": {
